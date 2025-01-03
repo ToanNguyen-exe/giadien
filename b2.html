@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bài tập 2</title>
+    </head>
+    <body>
+        <input type="number" id="number">
+        <button onclick="tinhTong()">Tính</button>
+        <p id="result"></p>
+        <script>
+            function GiaTienDien(soDien){
+                if(soDien<=50){
+                    return soDien *900;
+                }else if (soDien <=150){
+                    return soDien *1200;
+                }else if(soDien >=200){
+                    return soDien *2000;
+                }
+                }
+                function tinhTong(){
+                    var soDien = document.getElementById("number").value;
+                    var tienDien = GiaTienDien(soDien);
+                    document.getElementById("result").innerHTML = "Tiền điện là: " + tienDien + "đ";
+                }
+        </script>
+        </body>
+</html>
